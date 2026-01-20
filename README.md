@@ -1,10 +1,10 @@
-#📉 Customer Churn Prediction (EDA + Bagging Ensemble + CLI Input)
+# 📉 Customer Churn Prediction (EDA + Bagging Ensemble + CLI Input)
 
 This project builds an end-to-end Customer Churn Prediction system using Machine Learning. It includes full Exploratory Data Analysis (EDA), feature engineering (including sentiment score extraction from customer feedback), preprocessing using ColumnTransformer, handling imbalance using SMOTE, model comparison, and finally applying Bagging (Bootstrap Aggregation) on the best performing model selected by F1-score.
 
 The final model supports churn prediction using direct user input from the command line (input()).
 
-##📂 Project Files
+## 📂 Project Files
 
 Churn_Prediction_EDA_Bagging_BestModel_CLI_Input.ipynb → Main notebook (complete corrected project)
 
@@ -12,7 +12,7 @@ churn.csv → Dataset
 
 best_churn_model_bagged.pkl → Saved final trained model (generated after running the notebook)
 
-##🎯 Objective
+## 🎯 Objective
 
 To predict whether a customer is:
 
@@ -22,7 +22,7 @@ Churn (likely to churn)
 
 using structured customer data.
 
-##📌 Dataset Overview
+## 📌 Dataset Overview
 
 Dataset: churn.csv
 
@@ -39,7 +39,7 @@ The target column contains two classes:
 Class	Meaning	Count
 0	Active / Not at churn risk	16,980
 1	Churn / At churn risk	20,012
-##🔎 EDA Included
+## 🔎 EDA Included
 
 The notebook performs Exploratory Data Analysis such as:
 
@@ -51,11 +51,11 @@ The notebook performs Exploratory Data Analysis such as:
 ✅ numeric feature histograms
 ✅ correlation heatmap for numeric features
 
-##⚙️ Feature Engineering
+## ⚙️ Feature Engineering
 
 The project creates new meaningful features:
 
-###1) Date Features
+### 1) Date Features
 
 From:
 
@@ -69,7 +69,7 @@ days_since_joining
 
 days_since_last_visit
 
-###2) Sentiment Score Feature
+### 2) Sentiment Score Feature
 
 From:
 
@@ -79,25 +79,25 @@ Creates:
 
 sentiment_score using NLTK VADER sentiment analysis
 
-##🧠 Preprocessing + ML Pipeline
+## 🧠 Preprocessing + ML Pipeline
 
 The project uses a clean and industry-standard pipeline:
 
-###✅ Preprocessing
+### ✅ Preprocessing
 
 categorical encoding: OneHotEncoder(handle_unknown="ignore")
 
 numeric columns passed as-is
 
-###✅ Handling Class Imbalance
+### ✅ Handling Class Imbalance
 
 SMOTE (Synthetic Minority Oversampling Technique)
 
-###✅ Feature Selection
+### ✅ Feature Selection
 
 SelectKBest(f_classif, k=25) selects top features
 
-##🤖 Models Trained & Compared
+## 🤖 Models Trained & Compared
 
 The notebook trains multiple models and selects the best one based on F1-score:
 
@@ -113,7 +113,7 @@ LightGBM (LGBMClassifier)
 
 A model comparison plot is also generated.
 
-##🧩 Bagging on Best Model (Bootstrap Aggregation)
+## 🧩 Bagging on Best Model (Bootstrap Aggregation)
 
 After selecting the best model, the project applies:
 
@@ -125,7 +125,7 @@ Final saved model:
 
 best_churn_model_bagged.pkl
 
-##🧪 Evaluation
+## 🧪 Evaluation
 
 Each model is evaluated using:
 
@@ -139,7 +139,7 @@ Classification Report
 
 The final Bagged Best Model is evaluated using the same metrics.
 
-##💻 User Input (Command Line)
+## 💻 User Input (Command Line)
 
 The notebook supports direct command-line style input using Python input():
 
@@ -153,7 +153,7 @@ Region Category (default: Unknown):
 ...
 ✅ Prediction: Churn
 
-##🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 Python
 
@@ -173,11 +173,11 @@ NLTK (VADER Sentiment Analyzer)
 
 Joblib (model saving)
 
-##▶️ How to Run
-###1) Install dependencies
+## ▶️ How to Run
+### 1) Install dependencies
 pip install pandas numpy matplotlib scikit-learn imbalanced-learn xgboost lightgbm nltk joblib
 
-###2) Run notebook
+### 2) Run notebook
 jupyter notebook
 
 
@@ -187,7 +187,7 @@ Churn_Prediction_EDA_Bagging_BestModel_CLI_Input.ipynb
 
 Run all cells.
 
-##📌 Business Impact
+## 📌 Business Impact
 
 This churn prediction system helps businesses:
 
@@ -199,7 +199,7 @@ improve retention campaigns
 
 prioritize high-risk users
 
-##👨‍💻 Author
+## 👨‍💻 Author
 
 Brian Mathew
 Customer Churn Prediction Project
